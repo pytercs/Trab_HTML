@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Tudonet - Moda para Todos</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.png" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="masculino.html">Masculino</a></li>
+                                <li><a href="feminino.html">Feminino</a></li>
+						    	<li><a href="acessorios.html">Acessórios</a></li>
+								<li><a href="fale_conosco.html">Fale Conosco</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Digite o que deseja procurar..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+				   <ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+							 <div class="check_button"><a href="carrinho.html">Carrinho</a></div>
+							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		        <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	<div class="banner">
+	<!-- start slider -->
+       <div id="fwslider">
+         <div class="slider_container">
+            <div class="slide"> 
+               <img src="images/slider1.jpg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h1 class="title">Sessão Masculina</h1>
+                        <div class="button"><a href="masculino.html">Acessar</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+               <img src="images/slider2.jpg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h1 class="title1">Sessão Feminina</h1>
+                       	<div class="button"><a href="Feminino.html">Acessar</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+               <img src="images/slider4.jpeg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <h1 class="title">Acessórios</h1>
+                       	<div class="button"><a href="acessorios.html">Acessar</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+       </div>
+      </div>
+	  <div class="main">
+		<div class="content-top">
+			<h2>Nossos Produtos</h2>
+			<div class="close_but"><i class="close1"> </i></div>
+				<ul id="flexiselDemo3">
+				<li><img src="images/Blusa1.jpg" /></li>
+				<li><img src="images/Calça1.jpg" /></li>
+				<li><img src="images/blusaf1.jpg" /></li>
+				<li><img src="images/calçaf1.jpg" /></li>
+                <li><img src="images/calçado1.jpg" /></li>
+				<li><img src="images/calçadof1.jpg" /></li>
+			</ul>
+			<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		});
+		</script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		</div>
+	</div>
+    
+	<div class="content-bottom">
+		<div class="container">
+			<div class="row content_bottom-text">
+			  <div class="col-md-7">
+				<h3>Roupas de Qualidade<br>Para Todos!</h3>
+				<p class="m_1">Aqui na Tudonet, trabalhamos para o cliente, independentemente da área em que atuamos. Procuramos não apenas atender às suas necessidades, mas superar expectativas. Nosso intuito é encantar e fazer com que os consumidores tenham a melhor experiência de compra e atendimento. Realizamos as atividades da melhor forma possível inclusive para os nossos clientes internos. </p>
+				<p class="m_2">Somos uma empresa em constante aprendizado. Proporcionaremos diversas oportunidades para melhoria contínua, possibilitando que nossas equipes alcancem excelentes níveis de qualificação profissional. O crescimento nunca deve parar. Procuramos pessoas que queiram sempre evoluir e aprender cada vez mais! </p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="features">
+		<div class="container">
+			<h3 class="m_3">Mais vendidos</h3>
+			<div class="close_but"><i class="close1"> </i></div>
+                <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="Item.html">
+                    <img src="images/CK.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Calvin Klein Jeans</h2>
+                        <p>Camisa Polo Calvin Klein Jeans</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="Item.html">Comprar </a><img src="images/marker.png"/></h4>
+				</div>
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="#"/>
+                    <img src="images/BLF1.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Lança Perfume</h2>
+                        <p>Blusa Lança Perfume Estampada Preta</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Comprar </a><img src="images/marker.png"/></h4>
+				</div>
+                <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="#"/>
+                    <img src="images/CL1.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Colcci</h2>
+                        <p>Calça Colcci Rodrigo Azul</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Comprar </a><img src="images/marker.png"/></h4>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="#"/>
+                    <img src="images/CAL1.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Mr Kitsch</h2>
+                        <p>Sapatênis Mr Kitsch Draw Marrom</p>
+                      </div>
+                     </a> </div>
+                   <h4 class="m_4"><a href="#">Comprar </a><img src="images/marker.png"/></h4>
+				</div>
+			</div>
+		 </div>
+	    </div>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Produtos</h4>
+							<li><a href="masculino.html">Masculino</a></li>
+							<li><a href="feminino.html">Feminino</a></li>
+							<li><a href="acessorios.html">Acessórios</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Atendimento ao Cliente</h4>
+							<li><a href="fale_conosco.html">Fale Conosco</a></li>
+							<li><a href="#">Envio e rastreamento do pedido</a></li>
+							<li><a href="#">Trocas</a></li>
+							<li><a href="#">Garantia</a></li>
+							<li><a href="#">Devoluções</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+				    		   <form>
+				    			<input type="text" value="Digite seu email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Digite seu email';}">
+				    			<input type="submit" value="Enviar">
+				    		   </form>
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>
+							  <li class="instagram"><a href="#"><span> </span></a></li>	
+							  <li class="pinterest"><a href="#"><span> </span></a></li>	
+							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						    </ul>
+		   					
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>© Copywrite 2017 - Site feito por Pyter Carmo</p>
+		            </div>
+   				</div>
+			</div>
+		</div>
+</body>	
+</html>
